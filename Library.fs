@@ -55,5 +55,21 @@ module SparkFunc =
     let CurrentRow = Functions.CurrentRow
     let CurrentTimestamp = Functions.CurrentTimestamp
     let DateAdd (start:Column) (days:int) =  Functions.DateAdd(start,days)
-    
- 
+    let DateDiff (col1:Column) (col2:Column) = Functions.DateDiff(col1,col2)
+    let DateFormat (col:Column) (format:string)  = Functions.DateFormat(col,format)
+    let DateSub (col:Column) (days:int) = Functions.DateSub(col,days)
+    let DateTrunc (col:Column) (format:string) = Functions.DateTrunc(format,col)
+    let DayOfMonth (col:Column) = Functions.DayOfMonth col
+    let DayOfWeek (col:Column) = Functions.DayOfWeek col
+    let DayOfYear (col:Column) = Functions.DayOfYear col
+    let Decode (col:Column) (charset:string) = Functions.Decode(col,charset)
+    let Degrees (col:Column) = Functions.Degrees col
+    let DenseRank = Functions.DenseRank
+    let Desc (columnName:string) = Functions.Desc columnName
+    let DescNullsFirst (columnName:string) = Functions.DescNullsFirst columnName
+    let DescNullsLast (columnName:string) = Functions.DescNullsLast columnName
+    let ElementAt (column:Column) (value:obj)= Functions.ElementAt(column,value)
+    let Encode (col:Column) (charset:string) = Functions.Encode(col,charset)
+    let Exp (col:Column) = Functions.Exp col
+    let Explode (col:Column) = Functions.Explode col
+    let ExplodeOuter (col:Column) = Functions.ExplodeOuter col
